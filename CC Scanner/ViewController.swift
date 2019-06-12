@@ -18,7 +18,9 @@ import FirebaseMLCommon
 
     
     
-class ViewController: UIViewController {
+class ViewController: UIViewController, Storyboarded {
+    
+    weak var coordinator: MainCoordinator?
     
     var setupButton: UIButton = {
         let button = UIButton(type: .system)
@@ -54,6 +56,14 @@ class ViewController: UIViewController {
         func didReceiveMemoryWarning() {
             super.didReceiveMemoryWarning()
             // Dispose of any resources that can be recreated.
+        }
+        
+        func tapToScan(_ sender: Any) {
+            coordinator?.toScanner()
+        }
+        
+         func tapToMainMenu(_ sender: Any) {
+            coordinator?.toMainMenu()
         }
         
         

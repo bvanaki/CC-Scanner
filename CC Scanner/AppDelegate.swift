@@ -15,6 +15,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
     
+    var coordinator: MainCoordinator?
+    
     override init() {
     
     }
@@ -25,15 +27,21 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         window = UIWindow(frame: UIScreen.main.bounds)
         
-        let mainViewController = ViewController()
+        window?.makeKeyAndVisible()
         
-        window?.rootViewController = mainViewController
+         let navController = UINavigationController()
         
+        // send that into our coordinator so that it can display view controllers
+        coordinator = MainCoordinator(navigationController: navController)
+        
+        // tell the coordinator to take over control
+        coordinator?.start()
+        
+        // create a basic UIWindow and activate it
+        window?.rootViewController = navController
         window?.makeKeyAndVisible()
         
         FirebaseApp.configure()
-        
-        
         return true
     }
 

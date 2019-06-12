@@ -8,6 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		333B883422B158A100401ACC /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 333B883322B158A100401ACC /* GoogleService-Info.plist */; };
+		333B883722B17A5E00401ACC /* CameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 333B883522B17A5E00401ACC /* CameraViewController.swift */; };
+		333B883822B17A5E00401ACC /* CameraViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 333B883622B17A5E00401ACC /* CameraViewController.xib */; };
+		333B883A22B17C3200401ACC /* UIUtilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 333B883922B17C3200401ACC /* UIUtilities.swift */; };
+		333B883C22B1813000401ACC /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 333B883B22B1813000401ACC /* Coordinator.swift */; };
+		333B883E22B1817C00401ACC /* Storyboarded.swift in Sources */ = {isa = PBXBuildFile; fileRef = 333B883D22B1817C00401ACC /* Storyboarded.swift */; };
+		333B884022B1830C00401ACC /* MainCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 333B883F22B1830C00401ACC /* MainCoordinator.swift */; };
 		3367F85322B13FD60078312E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3367F85222B13FD60078312E /* AppDelegate.swift */; };
 		3367F85522B13FD60078312E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3367F85422B13FD60078312E /* ViewController.swift */; };
 		3367F85822B13FD60078312E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3367F85622B13FD60078312E /* Main.storyboard */; };
@@ -37,6 +43,12 @@
 
 /* Begin PBXFileReference section */
 		333B883322B158A100401ACC /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		333B883522B17A5E00401ACC /* CameraViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraViewController.swift; sourceTree = "<group>"; };
+		333B883622B17A5E00401ACC /* CameraViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CameraViewController.xib; sourceTree = "<group>"; };
+		333B883922B17C3200401ACC /* UIUtilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIUtilities.swift; sourceTree = "<group>"; };
+		333B883B22B1813000401ACC /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
+		333B883D22B1817C00401ACC /* Storyboarded.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Storyboarded.swift; sourceTree = "<group>"; };
+		333B883F22B1830C00401ACC /* MainCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCoordinator.swift; sourceTree = "<group>"; };
 		3367F84F22B13FD60078312E /* CC Scanner.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "CC Scanner.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3367F85222B13FD60078312E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3367F85422B13FD60078312E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -117,10 +129,16 @@
 			children = (
 				3367F85222B13FD60078312E /* AppDelegate.swift */,
 				3367F85422B13FD60078312E /* ViewController.swift */,
+				333B883B22B1813000401ACC /* Coordinator.swift */,
+				333B883D22B1817C00401ACC /* Storyboarded.swift */,
+				333B883522B17A5E00401ACC /* CameraViewController.swift */,
+				333B883922B17C3200401ACC /* UIUtilities.swift */,
+				333B883622B17A5E00401ACC /* CameraViewController.xib */,
 				3367F85622B13FD60078312E /* Main.storyboard */,
 				3367F85922B13FDC0078312E /* Assets.xcassets */,
 				3367F85B22B13FDC0078312E /* LaunchScreen.storyboard */,
 				3367F85E22B13FDC0078312E /* Info.plist */,
+				333B883F22B1830C00401ACC /* MainCoordinator.swift */,
 			);
 			path = "CC Scanner";
 			sourceTree = "<group>";
@@ -263,6 +281,7 @@
 				3367F85A22B13FDC0078312E /* Assets.xcassets in Resources */,
 				3367F85822B13FD60078312E /* Main.storyboard in Resources */,
 				333B883422B158A100401ACC /* GoogleService-Info.plist in Resources */,
+				333B883822B17A5E00401ACC /* CameraViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -347,7 +366,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				3367F85522B13FD60078312E /* ViewController.swift in Sources */,
+				333B884022B1830C00401ACC /* MainCoordinator.swift in Sources */,
 				3367F85322B13FD60078312E /* AppDelegate.swift in Sources */,
+				333B883C22B1813000401ACC /* Coordinator.swift in Sources */,
+				333B883A22B17C3200401ACC /* UIUtilities.swift in Sources */,
+				333B883722B17A5E00401ACC /* CameraViewController.swift in Sources */,
+				333B883E22B1817C00401ACC /* Storyboarded.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
