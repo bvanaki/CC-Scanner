@@ -1,5 +1,5 @@
 //
-//  CameraViewController.swift
+//  MainMenuViewController.swift
 //  CC Scanner
 //
 //  Created by Barbara Vanaki on 6/12/19.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class CameraViewController: UIViewController, Storyboarded {
+class MainMenuViewController: UIViewController, Storyboarded {
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -18,10 +18,8 @@ class CameraViewController: UIViewController, Storyboarded {
     
     weak var coordinator: MainCoordinator?
     
+
     
-    @IBAction func toMainMenu(_ sender: Any) {
-        coordinator?.toMainMenu()
-    }
     /*
     // MARK: - Navigation
 

@@ -6,11 +6,6 @@
 //  Copyright © 2019 Barbara Vanaki. All rights reserved.
 //
 
-/*YOU GOT THIS CODE FROM https://www.hackingwithswift.com/articles/71/how-to-use-the-coordinator-pattern-in-ios-apps
- 
- IT WAS A TUTORIAL FOR USING COORDINATORS*/
-
-import Foundation
 import UIKit
 
 protocol Coordinator {

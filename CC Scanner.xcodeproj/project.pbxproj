@@ -8,19 +8,18 @@
 
 /* Begin PBXBuildFile section */
 		333B883422B158A100401ACC /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 333B883322B158A100401ACC /* GoogleService-Info.plist */; };
-		333B883722B17A5E00401ACC /* CameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 333B883522B17A5E00401ACC /* CameraViewController.swift */; };
-		333B883822B17A5E00401ACC /* CameraViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 333B883622B17A5E00401ACC /* CameraViewController.xib */; };
-		333B883A22B17C3200401ACC /* UIUtilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 333B883922B17C3200401ACC /* UIUtilities.swift */; };
-		333B883C22B1813000401ACC /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 333B883B22B1813000401ACC /* Coordinator.swift */; };
-		333B883E22B1817C00401ACC /* Storyboarded.swift in Sources */ = {isa = PBXBuildFile; fileRef = 333B883D22B1817C00401ACC /* Storyboarded.swift */; };
-		333B884022B1830C00401ACC /* MainCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 333B883F22B1830C00401ACC /* MainCoordinator.swift */; };
-		3367F85322B13FD60078312E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3367F85222B13FD60078312E /* AppDelegate.swift */; };
-		3367F85522B13FD60078312E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3367F85422B13FD60078312E /* ViewController.swift */; };
 		3367F85822B13FD60078312E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3367F85622B13FD60078312E /* Main.storyboard */; };
 		3367F85A22B13FDC0078312E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3367F85922B13FDC0078312E /* Assets.xcassets */; };
 		3367F85D22B13FDC0078312E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3367F85B22B13FDC0078312E /* LaunchScreen.storyboard */; };
 		3367F86822B13FDC0078312E /* CC_ScannerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3367F86722B13FDC0078312E /* CC_ScannerTests.swift */; };
 		3367F87322B13FDC0078312E /* CC_ScannerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3367F87222B13FDC0078312E /* CC_ScannerUITests.swift */; };
+		33A7AE8722B18DE80048D7ED /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33A7AE8622B18DE80048D7ED /* Coordinator.swift */; };
+		33A7AE8922B18E430048D7ED /* Storyboarded.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33A7AE8822B18E430048D7ED /* Storyboarded.swift */; };
+		33A7AE8B22B18F6D0048D7ED /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33A7AE8A22B18F6D0048D7ED /* ViewController.swift */; };
+		33A7AE8D22B18FFC0048D7ED /* MainCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33A7AE8C22B18FFC0048D7ED /* MainCoordinator.swift */; };
+		33A7AE8F22B190120048D7ED /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33A7AE8E22B190120048D7ED /* AppDelegate.swift */; };
+		33A7AE9122B190740048D7ED /* MainMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33A7AE9022B190740048D7ED /* MainMenuViewController.swift */; };
+		33A7AE9322B190810048D7ED /* CameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33A7AE9222B190810048D7ED /* CameraViewController.swift */; };
 		7DAF99B2D922E302D05052FF /* Pods_CC_Scanner.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D8E37125E56DDFC9CA97F147 /* Pods_CC_Scanner.framework */; };
 /* End PBXBuildFile section */
 
@@ -43,15 +42,7 @@
 
 /* Begin PBXFileReference section */
 		333B883322B158A100401ACC /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
-		333B883522B17A5E00401ACC /* CameraViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraViewController.swift; sourceTree = "<group>"; };
-		333B883622B17A5E00401ACC /* CameraViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CameraViewController.xib; sourceTree = "<group>"; };
-		333B883922B17C3200401ACC /* UIUtilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIUtilities.swift; sourceTree = "<group>"; };
-		333B883B22B1813000401ACC /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
-		333B883D22B1817C00401ACC /* Storyboarded.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Storyboarded.swift; sourceTree = "<group>"; };
-		333B883F22B1830C00401ACC /* MainCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCoordinator.swift; sourceTree = "<group>"; };
 		3367F84F22B13FD60078312E /* CC Scanner.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "CC Scanner.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		3367F85222B13FD60078312E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		3367F85422B13FD60078312E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		3367F85722B13FD60078312E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		3367F85922B13FDC0078312E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3367F85C22B13FDC0078312E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -62,6 +53,14 @@
 		3367F86E22B13FDC0078312E /* CC ScannerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "CC ScannerUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3367F87222B13FDC0078312E /* CC_ScannerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CC_ScannerUITests.swift; sourceTree = "<group>"; };
 		3367F87422B13FDC0078312E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		33A7AE8522B18DE80048D7ED /* CC Scanner-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CC Scanner-Bridging-Header.h"; sourceTree = "<group>"; };
+		33A7AE8622B18DE80048D7ED /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
+		33A7AE8822B18E430048D7ED /* Storyboarded.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Storyboarded.swift; sourceTree = "<group>"; };
+		33A7AE8A22B18F6D0048D7ED /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		33A7AE8C22B18FFC0048D7ED /* MainCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCoordinator.swift; sourceTree = "<group>"; };
+		33A7AE8E22B190120048D7ED /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		33A7AE9022B190740048D7ED /* MainMenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainMenuViewController.swift; sourceTree = "<group>"; };
+		33A7AE9222B190810048D7ED /* CameraViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraViewController.swift; sourceTree = "<group>"; };
 		4CDE34D713CBD24F2A79D498 /* Pods-CC Scanner.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CC Scanner.debug.xcconfig"; path = "Target Support Files/Pods-CC Scanner/Pods-CC Scanner.debug.xcconfig"; sourceTree = "<group>"; };
 		A02CBE89EE4F0FC8BE108E7F /* Pods-CC Scanner.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CC Scanner.release.xcconfig"; path = "Target Support Files/Pods-CC Scanner/Pods-CC Scanner.release.xcconfig"; sourceTree = "<group>"; };
 		D8E37125E56DDFC9CA97F147 /* Pods_CC_Scanner.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CC_Scanner.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -127,18 +126,18 @@
 		3367F85122B13FD60078312E /* CC Scanner */ = {
 			isa = PBXGroup;
 			children = (
-				3367F85222B13FD60078312E /* AppDelegate.swift */,
-				3367F85422B13FD60078312E /* ViewController.swift */,
-				333B883B22B1813000401ACC /* Coordinator.swift */,
-				333B883D22B1817C00401ACC /* Storyboarded.swift */,
-				333B883522B17A5E00401ACC /* CameraViewController.swift */,
-				333B883922B17C3200401ACC /* UIUtilities.swift */,
-				333B883622B17A5E00401ACC /* CameraViewController.xib */,
 				3367F85622B13FD60078312E /* Main.storyboard */,
+				33A7AE8C22B18FFC0048D7ED /* MainCoordinator.swift */,
+				33A7AE8E22B190120048D7ED /* AppDelegate.swift */,
+				33A7AE9022B190740048D7ED /* MainMenuViewController.swift */,
+				33A7AE9222B190810048D7ED /* CameraViewController.swift */,
 				3367F85922B13FDC0078312E /* Assets.xcassets */,
 				3367F85B22B13FDC0078312E /* LaunchScreen.storyboard */,
+				33A7AE8622B18DE80048D7ED /* Coordinator.swift */,
+				33A7AE8A22B18F6D0048D7ED /* ViewController.swift */,
+				33A7AE8822B18E430048D7ED /* Storyboarded.swift */,
 				3367F85E22B13FDC0078312E /* Info.plist */,
-				333B883F22B1830C00401ACC /* MainCoordinator.swift */,
+				33A7AE8522B18DE80048D7ED /* CC Scanner-Bridging-Header.h */,
 			);
 			path = "CC Scanner";
 			sourceTree = "<group>";
@@ -241,6 +240,7 @@
 				TargetAttributes = {
 					3367F84E22B13FD60078312E = {
 						CreatedOnToolsVersion = 10.2.1;
+						LastSwiftMigration = 1100;
 					};
 					3367F86222B13FDC0078312E = {
 						CreatedOnToolsVersion = 10.2.1;
@@ -281,7 +281,6 @@
 				3367F85A22B13FDC0078312E /* Assets.xcassets in Resources */,
 				3367F85822B13FD60078312E /* Main.storyboard in Resources */,
 				333B883422B158A100401ACC /* GoogleService-Info.plist in Resources */,
-				333B883822B17A5E00401ACC /* CameraViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -365,13 +364,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3367F85522B13FD60078312E /* ViewController.swift in Sources */,
-				333B884022B1830C00401ACC /* MainCoordinator.swift in Sources */,
-				3367F85322B13FD60078312E /* AppDelegate.swift in Sources */,
-				333B883C22B1813000401ACC /* Coordinator.swift in Sources */,
-				333B883A22B17C3200401ACC /* UIUtilities.swift in Sources */,
-				333B883722B17A5E00401ACC /* CameraViewController.swift in Sources */,
-				333B883E22B1817C00401ACC /* Storyboarded.swift in Sources */,
+				33A7AE9122B190740048D7ED /* MainMenuViewController.swift in Sources */,
+				33A7AE8B22B18F6D0048D7ED /* ViewController.swift in Sources */,
+				33A7AE8D22B18FFC0048D7ED /* MainCoordinator.swift in Sources */,
+				33A7AE8722B18DE80048D7ED /* Coordinator.swift in Sources */,
+				33A7AE9322B190810048D7ED /* CameraViewController.swift in Sources */,
+				33A7AE8F22B190120048D7ED /* AppDelegate.swift in Sources */,
+				33A7AE8922B18E430048D7ED /* Storyboarded.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -547,6 +546,7 @@
 			baseConfigurationReference = 4CDE34D713CBD24F2A79D498 /* Pods-CC Scanner.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = R87CF3YZ2B;
 				INFOPLIST_FILE = "CC Scanner/Info.plist";
@@ -556,6 +556,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "Barbara-Vanaki.Universal-CC-Scanner";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "CC Scanner/CC Scanner-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -566,6 +568,7 @@
 			baseConfigurationReference = A02CBE89EE4F0FC8BE108E7F /* Pods-CC Scanner.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = R87CF3YZ2B;
 				INFOPLIST_FILE = "CC Scanner/Info.plist";
@@ -575,6 +578,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "Barbara-Vanaki.Universal-CC-Scanner";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "CC Scanner/CC Scanner-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

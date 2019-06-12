@@ -8,7 +8,7 @@
 
 import UIKit
 
-class MainCoordinator: Coordinator {
+class MainCoordinator: Coordinator  {
     var childCoordinators = [Coordinator]()
     var navigationController: UINavigationController
     
@@ -23,16 +23,15 @@ class MainCoordinator: Coordinator {
     }
     
     func toMainMenu() {
-        let vc = ViewController.instantiate()
+        let vc = MainMenuViewController.instantiate()
         vc.coordinator = self
         navigationController.pushViewController(vc, animated: true)
     }
     
-    func toScanner() {
+    func toCameraPage() {
         let vc = CameraViewController.instantiate()
         vc.coordinator = self
         navigationController.pushViewController(vc, animated: true)
     }
-    
     
 }

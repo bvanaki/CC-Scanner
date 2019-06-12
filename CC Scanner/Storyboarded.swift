@@ -6,11 +6,6 @@
 //  Copyright © 2019 Barbara Vanaki. All rights reserved.
 //
 
-/*YOU GOT THIS CODE FROM https://www.hackingwithswift.com/articles/71/how-to-use-the-coordinator-pattern-in-ios-apps
- 
- IT WAS A TUTORIAL FOR USING COORDINATORS*/
-
-import Foundation
 import UIKit
 
 protocol Storyboarded {
@@ -21,6 +16,7 @@ extension Storyboarded where Self: UIViewController {
     static func instantiate() -> Self {
         // this pulls out "MyApp.MyViewController"
         let fullName = NSStringFromClass(self)
+        
         // this splits by the dot and uses everything after, giving "MyViewController"
         let className = fullName.components(separatedBy: ".")[1]
         
