@@ -16,6 +16,8 @@ import FirebaseMLVisionAutoML
 import FirebaseMLCommon
 
 
+    
+    
 class ViewController: UIViewController {
 
     override func viewDidLoad() {
@@ -27,4 +29,3 @@ class ViewController: UIViewController {
 
 
 }
-
