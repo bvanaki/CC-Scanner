@@ -19,13 +19,47 @@ import FirebaseMLCommon
     
     
 class ViewController: UIViewController {
-
+    
+    var setupButton: UIButton = {
+        let button = UIButton(type: .system)
+        button.backgroundColor = UIColor.white
+        button.setTitle("Scan Card", for: .normal)
+        button.setTitleColor(UIColor.systemBlue, for: .normal)
+        button.translatesAutoresizingMaskIntoConstraints = false
+        button.titleLabel?.font = UIFont.systemFont(ofSize: 18.0)
+        return button
+    }()
+    
     override func viewDidLoad() {
-        
-        
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        // Do any additional setup after loading the view, typically from a nib.
+        
+        
+        view.addSubview(setupButton)
+        view.backgroundColor = .white
+        scanButton()
+        
     }
-
+    
+    func scanButton() {
+        
+        setupButton.centerXAnchor.constraint(equalTo: view.centerXAnchor ).isActive = true
+        setupButton.centerYAnchor.constraint(equalTo: view.centerYAnchor).isActive = true
+        setupButton.widthAnchor.constraint(equalTo: view.widthAnchor, constant: -24).isActive = true
+        setupButton.heightAnchor.constraint(equalToConstant: 150).isActive = true
+        
+        
+        
+        
+        func didReceiveMemoryWarning() {
+            super.didReceiveMemoryWarning()
+            // Dispose of any resources that can be recreated.
+        }
+        
+        
+    }
+    
+    
+    
 
 }
