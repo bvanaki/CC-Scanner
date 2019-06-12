@@ -3,10 +3,11 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		333B883422B158A100401ACC /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 333B883322B158A100401ACC /* GoogleService-Info.plist */; };
 		3367F85322B13FD60078312E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3367F85222B13FD60078312E /* AppDelegate.swift */; };
 		3367F85522B13FD60078312E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3367F85422B13FD60078312E /* ViewController.swift */; };
 		3367F85822B13FD60078312E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3367F85622B13FD60078312E /* Main.storyboard */; };
@@ -14,6 +15,7 @@
 		3367F85D22B13FDC0078312E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3367F85B22B13FDC0078312E /* LaunchScreen.storyboard */; };
 		3367F86822B13FDC0078312E /* CC_ScannerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3367F86722B13FDC0078312E /* CC_ScannerTests.swift */; };
 		3367F87322B13FDC0078312E /* CC_ScannerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3367F87222B13FDC0078312E /* CC_ScannerUITests.swift */; };
+		7DAF99B2D922E302D05052FF /* Pods_CC_Scanner.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D8E37125E56DDFC9CA97F147 /* Pods_CC_Scanner.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,6 +36,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		333B883322B158A100401ACC /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		3367F84F22B13FD60078312E /* CC Scanner.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "CC Scanner.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3367F85222B13FD60078312E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3367F85422B13FD60078312E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -47,6 +50,9 @@
 		3367F86E22B13FDC0078312E /* CC ScannerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "CC ScannerUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3367F87222B13FDC0078312E /* CC_ScannerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CC_ScannerUITests.swift; sourceTree = "<group>"; };
 		3367F87422B13FDC0078312E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4CDE34D713CBD24F2A79D498 /* Pods-CC Scanner.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CC Scanner.debug.xcconfig"; path = "Target Support Files/Pods-CC Scanner/Pods-CC Scanner.debug.xcconfig"; sourceTree = "<group>"; };
+		A02CBE89EE4F0FC8BE108E7F /* Pods-CC Scanner.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CC Scanner.release.xcconfig"; path = "Target Support Files/Pods-CC Scanner/Pods-CC Scanner.release.xcconfig"; sourceTree = "<group>"; };
+		D8E37125E56DDFC9CA97F147 /* Pods_CC_Scanner.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CC_Scanner.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +60,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7DAF99B2D922E302D05052FF /* Pods_CC_Scanner.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -74,13 +81,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1F18DEC126243467854F0D17 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D8E37125E56DDFC9CA97F147 /* Pods_CC_Scanner.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		3367F84622B13FD60078312E = {
 			isa = PBXGroup;
 			children = (
+				333B883322B158A100401ACC /* GoogleService-Info.plist */,
 				3367F85122B13FD60078312E /* CC Scanner */,
 				3367F86622B13FDC0078312E /* CC ScannerTests */,
 				3367F87122B13FDC0078312E /* CC ScannerUITests */,
 				3367F85022B13FD60078312E /* Products */,
+				5F0557794341E880BDAFE5C3 /* Pods */,
+				1F18DEC126243467854F0D17 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -125,6 +143,15 @@
 			path = "CC ScannerUITests";
 			sourceTree = "<group>";
 		};
+		5F0557794341E880BDAFE5C3 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				4CDE34D713CBD24F2A79D498 /* Pods-CC Scanner.debug.xcconfig */,
+				A02CBE89EE4F0FC8BE108E7F /* Pods-CC Scanner.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -132,9 +159,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 3367F87722B13FDC0078312E /* Build configuration list for PBXNativeTarget "CC Scanner" */;
 			buildPhases = (
+				AE79BFDFEC68984DAD65AC19 /* [CP] Check Pods Manifest.lock */,
 				3367F84B22B13FD60078312E /* Sources */,
 				3367F84C22B13FD60078312E /* Frameworks */,
 				3367F84D22B13FD60078312E /* Resources */,
+				48568465848B170F7EFDDD6F /* [CP] Embed Pods Frameworks */,
+				2DD9197EAC82CBB5D2A97B67 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -232,6 +262,7 @@
 				3367F85D22B13FDC0078312E /* LaunchScreen.storyboard in Resources */,
 				3367F85A22B13FDC0078312E /* Assets.xcassets in Resources */,
 				3367F85822B13FD60078312E /* Main.storyboard in Resources */,
+				333B883422B158A100401ACC /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -250,6 +281,65 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		2DD9197EAC82CBB5D2A97B67 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-CC Scanner/Pods-CC Scanner-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-CC Scanner/Pods-CC Scanner-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-CC Scanner/Pods-CC Scanner-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		48568465848B170F7EFDDD6F /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-CC Scanner/Pods-CC Scanner-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-CC Scanner/Pods-CC Scanner-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-CC Scanner/Pods-CC Scanner-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		AE79BFDFEC68984DAD65AC19 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-CC Scanner-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		3367F84B22B13FD60078312E /* Sources */ = {
@@ -430,6 +520,7 @@
 		};
 		3367F87822B13FDC0078312E /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4CDE34D713CBD24F2A79D498 /* Pods-CC Scanner.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -439,7 +530,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "Barbara-Vanaki.CC-Scanner";
+				PRODUCT_BUNDLE_IDENTIFIER = "Barbara-Vanaki.Universal-CC-Scanner";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -448,6 +539,7 @@
 		};
 		3367F87922B13FDC0078312E /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A02CBE89EE4F0FC8BE108E7F /* Pods-CC Scanner.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -457,7 +549,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "Barbara-Vanaki.CC-Scanner";
+				PRODUCT_BUNDLE_IDENTIFIER = "Barbara-Vanaki.Universal-CC-Scanner";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

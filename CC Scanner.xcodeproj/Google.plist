@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>626614234172-fi7kmglqiggrp665blg7pkbhtgpm489a.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.626614234172-fi7kmglqiggrp665blg7pkbhtgpm489a</string>
+	<key>API_KEY</key>
+	<string>AIzaSyAKsNn1MbDTKyRjF_W16pH0l72uMdw-cbA</string>
+	<key>GCM_SENDER_ID</key>
+	<string>626614234172</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>Barbara-Vanaki.Universal-CC-Scanner</string>
+	<key>PROJECT_ID</key>
+	<string>cc-scanner</string>
+	<key>STORAGE_BUCKET</key>
+	<string>cc-scanner.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:626614234172:ios:68c45b6da6cc53c5</string>
+	<key>DATABASE_URL</key>
+	<string>https://cc-scanner.firebaseio.com</string>
+</dict>
+</plist>
