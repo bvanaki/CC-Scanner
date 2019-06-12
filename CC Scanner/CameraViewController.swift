@@ -18,10 +18,7 @@ class CameraViewController: UIViewController, Storyboarded {
     
     weak var coordinator: MainCoordinator?
     
-    
-    @IBAction func toMainMenu(_ sender: Any) {
-        coordinator?.toMainMenu()
-    }
+
     /*
     // MARK: - Navigation
 

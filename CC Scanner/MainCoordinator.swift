@@ -23,7 +23,7 @@ class MainCoordinator: Coordinator  {
     }
     
     func toMainMenu() {
-        let vc = MainMenuViewController.instantiate()
+        let vc = ViewController.instantiate()
         vc.coordinator = self
         navigationController.pushViewController(vc, animated: true)
     }
