@@ -15,7 +15,7 @@
 		3367F87322B13FDC0078312E /* CC_ScannerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3367F87222B13FDC0078312E /* CC_ScannerUITests.swift */; };
 		33A7AE8722B18DE80048D7ED /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33A7AE8622B18DE80048D7ED /* Coordinator.swift */; };
 		33A7AE8922B18E430048D7ED /* Storyboarded.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33A7AE8822B18E430048D7ED /* Storyboarded.swift */; };
-		33A7AE8B22B18F6D0048D7ED /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33A7AE8A22B18F6D0048D7ED /* ViewController.swift */; };
+		33A7AE8B22B18F6D0048D7ED /* CardInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33A7AE8A22B18F6D0048D7ED /* CardInfoViewController.swift */; };
 		33A7AE8D22B18FFC0048D7ED /* MainCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33A7AE8C22B18FFC0048D7ED /* MainCoordinator.swift */; };
 		33A7AE8F22B190120048D7ED /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33A7AE8E22B190120048D7ED /* AppDelegate.swift */; };
 		33A7AE9322B190810048D7ED /* CameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33A7AE9222B190810048D7ED /* CameraViewController.swift */; };
@@ -55,7 +55,7 @@
 		33A7AE8522B18DE80048D7ED /* CC Scanner-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CC Scanner-Bridging-Header.h"; sourceTree = "<group>"; };
 		33A7AE8622B18DE80048D7ED /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 		33A7AE8822B18E430048D7ED /* Storyboarded.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Storyboarded.swift; sourceTree = "<group>"; };
-		33A7AE8A22B18F6D0048D7ED /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		33A7AE8A22B18F6D0048D7ED /* CardInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardInfoViewController.swift; sourceTree = "<group>"; };
 		33A7AE8C22B18FFC0048D7ED /* MainCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCoordinator.swift; sourceTree = "<group>"; };
 		33A7AE8E22B190120048D7ED /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		33A7AE9222B190810048D7ED /* CameraViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraViewController.swift; sourceTree = "<group>"; };
@@ -131,7 +131,7 @@
 				3367F85922B13FDC0078312E /* Assets.xcassets */,
 				3367F85B22B13FDC0078312E /* LaunchScreen.storyboard */,
 				33A7AE8622B18DE80048D7ED /* Coordinator.swift */,
-				33A7AE8A22B18F6D0048D7ED /* ViewController.swift */,
+				33A7AE8A22B18F6D0048D7ED /* CardInfoViewController.swift */,
 				33A7AE8822B18E430048D7ED /* Storyboarded.swift */,
 				3367F85E22B13FDC0078312E /* Info.plist */,
 				33A7AE8522B18DE80048D7ED /* CC Scanner-Bridging-Header.h */,
@@ -361,7 +361,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				33A7AE8B22B18F6D0048D7ED /* ViewController.swift in Sources */,
+				33A7AE8B22B18F6D0048D7ED /* CardInfoViewController.swift in Sources */,
 				33A7AE8D22B18FFC0048D7ED /* MainCoordinator.swift in Sources */,
 				33A7AE8722B18DE80048D7ED /* Coordinator.swift in Sources */,
 				33A7AE9322B190810048D7ED /* CameraViewController.swift in Sources */,
