@@ -21,7 +21,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Scan Card"/>
                                 <connections>
-                                    <action selector="toScanPage:" destination="BYZ-38-t0r" eventType="touchUpInside" id="w97-5H-fAe"/>
+                                    <action selector="toCameraPage:" destination="BYZ-38-t0r" eventType="touchUpInside" id="w97-5H-fAe"/>
                                 </connections>
                             </button>
                         </subviews>

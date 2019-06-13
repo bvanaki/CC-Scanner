@@ -8,6 +8,11 @@
 
 import UIKit
 
+import FirebaseMLVision
+import FirebaseMLVisionObjectDetection
+import FirebaseMLVisionAutoML
+import FirebaseMLCommon
+
 class CameraViewController: UIViewController, Storyboarded {
 
     override func viewDidLoad() {

@@ -22,7 +22,7 @@ class ViewController: UIViewController, Storyboarded {
     }
     
     
-    @IBAction func toScanPage(_ sender: Any) {
+    @IBAction func toCameraPage(_ sender: Any) {
         coordinator?.toCameraPage()
     }
     
