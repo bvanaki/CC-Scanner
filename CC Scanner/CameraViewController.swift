@@ -11,6 +11,8 @@ import Vision
 import AVFoundation
 import AVKit
 
+import TesseractOCR
+
 
 class CameraViewController: UIViewController, Storyboarded {
 
@@ -91,7 +93,7 @@ class CameraViewController: UIViewController, Storyboarded {
                                           completionHandler: { (granted:Bool) -> Void in
                                             if granted {
                                                 DispatchQueue.main.async {
-                                                    print("banana")
+                                                    print("granted")
                                                     self.configureCamera()
                                                 }
                                             }
@@ -117,11 +119,6 @@ class CameraViewController: UIViewController, Storyboarded {
     */
 
 }
-
-
-
-
-
 
 //remember that stuff in the extension isn't tested by unit tests, so try not to put too many important bits in here
 

@@ -13,12 +13,14 @@
 		3367F86822B13FDC0078312E /* CC_ScannerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3367F86722B13FDC0078312E /* CC_ScannerTests.swift */; };
 		3367F87322B13FDC0078312E /* CC_ScannerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3367F87222B13FDC0078312E /* CC_ScannerUITests.swift */; };
 		338F01DD22B7E29A0026DBE3 /* Preview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 338F01DC22B7E29A0026DBE3 /* Preview.swift */; };
+		338F01DF22B823870026DBE3 /* tessdata in Resources */ = {isa = PBXBuildFile; fileRef = 338F01DE22B8237D0026DBE3 /* tessdata */; };
 		33A7AE8722B18DE80048D7ED /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33A7AE8622B18DE80048D7ED /* Coordinator.swift */; };
 		33A7AE8922B18E430048D7ED /* Storyboarded.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33A7AE8822B18E430048D7ED /* Storyboarded.swift */; };
 		33A7AE8B22B18F6D0048D7ED /* CardInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33A7AE8A22B18F6D0048D7ED /* CardInfoViewController.swift */; };
 		33A7AE8D22B18FFC0048D7ED /* MainCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33A7AE8C22B18FFC0048D7ED /* MainCoordinator.swift */; };
 		33A7AE8F22B190120048D7ED /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33A7AE8E22B190120048D7ED /* AppDelegate.swift */; };
 		33A7AE9322B190810048D7ED /* CameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33A7AE9222B190810048D7ED /* CameraViewController.swift */; };
+		A9B391D8B95434229187703C /* Pods_CC_Scanner.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DD6DCC28F27DF055A73ABEDB /* Pods_CC_Scanner.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,6 +41,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		01BD903D78BAFF300A890DCD /* Pods-CC Scanner.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CC Scanner.release.xcconfig"; path = "Target Support Files/Pods-CC Scanner/Pods-CC Scanner.release.xcconfig"; sourceTree = "<group>"; };
 		3367F84F22B13FD60078312E /* CC Scanner.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "CC Scanner.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3367F85722B13FD60078312E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		3367F85922B13FDC0078312E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -51,6 +54,7 @@
 		3367F87222B13FDC0078312E /* CC_ScannerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CC_ScannerUITests.swift; sourceTree = "<group>"; };
 		3367F87422B13FDC0078312E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		338F01DC22B7E29A0026DBE3 /* Preview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Preview.swift; sourceTree = "<group>"; };
+		338F01DE22B8237D0026DBE3 /* tessdata */ = {isa = PBXFileReference; lastKnownFileType = folder; name = tessdata; path = "CC Scanner/tessdata"; sourceTree = "<group>"; };
 		33A7AE8522B18DE80048D7ED /* CC Scanner-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CC Scanner-Bridging-Header.h"; sourceTree = "<group>"; };
 		33A7AE8622B18DE80048D7ED /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 		33A7AE8822B18E430048D7ED /* Storyboarded.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Storyboarded.swift; sourceTree = "<group>"; };
@@ -58,6 +62,8 @@
 		33A7AE8C22B18FFC0048D7ED /* MainCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCoordinator.swift; sourceTree = "<group>"; };
 		33A7AE8E22B190120048D7ED /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		33A7AE9222B190810048D7ED /* CameraViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraViewController.swift; sourceTree = "<group>"; };
+		D8EEA5CE4DA0C72D4AEBFFC6 /* Pods-CC Scanner.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CC Scanner.debug.xcconfig"; path = "Target Support Files/Pods-CC Scanner/Pods-CC Scanner.debug.xcconfig"; sourceTree = "<group>"; };
+		DD6DCC28F27DF055A73ABEDB /* Pods_CC_Scanner.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CC_Scanner.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,6 +71,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A9B391D8B95434229187703C /* Pods_CC_Scanner.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -88,10 +95,13 @@
 		3367F84622B13FD60078312E = {
 			isa = PBXGroup;
 			children = (
+				338F01DE22B8237D0026DBE3 /* tessdata */,
 				3367F85122B13FD60078312E /* CC Scanner */,
 				3367F86622B13FDC0078312E /* CC ScannerTests */,
 				3367F87122B13FDC0078312E /* CC ScannerUITests */,
 				3367F85022B13FD60078312E /* Products */,
+				7CD3703DBFE1B94C3299D44F /* Pods */,
+				E4E7A7786A10A78F00963312 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -142,6 +152,24 @@
 			path = "CC ScannerUITests";
 			sourceTree = "<group>";
 		};
+		7CD3703DBFE1B94C3299D44F /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				D8EEA5CE4DA0C72D4AEBFFC6 /* Pods-CC Scanner.debug.xcconfig */,
+				01BD903D78BAFF300A890DCD /* Pods-CC Scanner.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		E4E7A7786A10A78F00963312 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				DD6DCC28F27DF055A73ABEDB /* Pods_CC_Scanner.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -149,9 +177,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 3367F87722B13FDC0078312E /* Build configuration list for PBXNativeTarget "CC Scanner" */;
 			buildPhases = (
+				8296A63A153A546269EC0D97 /* [CP] Check Pods Manifest.lock */,
 				3367F84B22B13FD60078312E /* Sources */,
 				3367F84C22B13FD60078312E /* Frameworks */,
 				3367F84D22B13FD60078312E /* Resources */,
+				903E589D0DFD8AD03AC3E803 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -248,6 +278,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3367F85D22B13FDC0078312E /* LaunchScreen.storyboard in Resources */,
+				338F01DF22B823870026DBE3 /* tessdata in Resources */,
 				3367F85A22B13FDC0078312E /* Assets.xcassets in Resources */,
 				3367F85822B13FD60078312E /* Main.storyboard in Resources */,
 			);
@@ -268,6 +299,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		8296A63A153A546269EC0D97 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-CC Scanner-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		903E589D0DFD8AD03AC3E803 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-CC Scanner/Pods-CC Scanner-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-CC Scanner/Pods-CC Scanner-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-CC Scanner/Pods-CC Scanner-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		3367F84B22B13FD60078312E /* Sources */ = {
@@ -453,6 +526,7 @@
 		};
 		3367F87822B13FDC0078312E /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D8EEA5CE4DA0C72D4AEBFFC6 /* Pods-CC Scanner.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
@@ -474,6 +548,7 @@
 		};
 		3367F87922B13FDC0078312E /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 01BD903D78BAFF300A890DCD /* Pods-CC Scanner.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
