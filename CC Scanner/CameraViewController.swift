@@ -58,12 +58,13 @@ class CameraViewController: UIViewController, Storyboarded {
         }
         do {
             let captureDeviceInput = try AVCaptureDeviceInput(device: cameraDevice!)
+            //if you were able to get a device, then hook it up
             if session.canAddInput(captureDeviceInput) {
                 session.addInput(captureDeviceInput)
             }
         }
         catch {
-            print("Error occured \(error)")
+            print("Error occured configuring the camera \(error)")
             return
         }
         session.sessionPreset = .high
