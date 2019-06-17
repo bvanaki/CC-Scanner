@@ -123,38 +123,5 @@ class CameraViewController: UIViewController, Storyboarded {
 
 
 
+//remember that stuff in the extension isn't tested by unit tests, so try not to put too many important bits in here
 
-extension ViewController: AVCaptureVideoDataOutputSampleBufferDelegate {
-    // MARK: - Camera Delegate and Setup
-    func captureOutput(_ output: AVCaptureOutput, didOutput sampleBuffer: CMSampleBuffer, from connection: AVCaptureConnection) {
-        guard let pixelBuffer = CMSampleBufferGetImageBuffer(sampleBuffer) else {
-            return
-        }
-        var imageRequestOptions = [VNImageOption: Any]()
-        if let cameraData = CMGetAttachment(sampleBuffer, key: kCMSampleBufferAttachmentKey_CameraIntrinsicMatrix, attachmentModeOut: nil) {
-            imageRequestOptions[.cameraIntrinsics] = cameraData
-        }
-        let imageRequestHandler = VNImageRequestHandler(cvPixelBuffer: pixelBuffer, orientation: CGImagePropertyOrientation(rawValue: 6)!, options: imageRequestOptions)
-
-        var ciImage = CIImage(cvPixelBuffer: pixelBuffer)
-        let transform = ciImage.orientationTransform(for: CGImagePropertyOrientation(rawValue: 6)!)
-        ciImage = ciImage.transformed(by: transform)
-        let size = ciImage.extent.size
-        var recognizedTextPositionTuples = [(rect: CGRect, text: String)]()
-
-        DispatchQueue.main.async {
-            let viewWidth = self.view.frame.size.width
-            let viewHeight = self.view.frame.size.height
-            guard let sublayers = self.view.layer.sublayers else {
-                return
-            }
-            for layer in sublayers[1...] {
-                
-                if let _ = layer as? CATextLayer {
-                    layer.removeFromSuperlayer()
-                }
-            }
-
-        }
-    }
-}
