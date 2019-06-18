@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -13,13 +13,13 @@
 		3367F86822B13FDC0078312E /* CC_ScannerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3367F86722B13FDC0078312E /* CC_ScannerTests.swift */; };
 		3367F87322B13FDC0078312E /* CC_ScannerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3367F87222B13FDC0078312E /* CC_ScannerUITests.swift */; };
 		338F01DD22B7E29A0026DBE3 /* Preview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 338F01DC22B7E29A0026DBE3 /* Preview.swift */; };
-		338F01DF22B823870026DBE3 /* tessdata in Resources */ = {isa = PBXBuildFile; fileRef = 338F01DE22B8237D0026DBE3 /* tessdata */; };
 		33A7AE8722B18DE80048D7ED /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33A7AE8622B18DE80048D7ED /* Coordinator.swift */; };
 		33A7AE8922B18E430048D7ED /* Storyboarded.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33A7AE8822B18E430048D7ED /* Storyboarded.swift */; };
 		33A7AE8B22B18F6D0048D7ED /* CardInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33A7AE8A22B18F6D0048D7ED /* CardInfoViewController.swift */; };
 		33A7AE8D22B18FFC0048D7ED /* MainCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33A7AE8C22B18FFC0048D7ED /* MainCoordinator.swift */; };
 		33A7AE8F22B190120048D7ED /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33A7AE8E22B190120048D7ED /* AppDelegate.swift */; };
 		33A7AE9322B190810048D7ED /* CameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33A7AE9222B190810048D7ED /* CameraViewController.swift */; };
+		33EFD7D622B96F62001D3933 /* tessdata in Resources */ = {isa = PBXBuildFile; fileRef = 33EFD7D522B96F62001D3933 /* tessdata */; };
 		A9B391D8B95434229187703C /* Pods_CC_Scanner.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DD6DCC28F27DF055A73ABEDB /* Pods_CC_Scanner.framework */; };
 /* End PBXBuildFile section */
 
@@ -54,7 +54,6 @@
 		3367F87222B13FDC0078312E /* CC_ScannerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CC_ScannerUITests.swift; sourceTree = "<group>"; };
 		3367F87422B13FDC0078312E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		338F01DC22B7E29A0026DBE3 /* Preview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Preview.swift; sourceTree = "<group>"; };
-		338F01DE22B8237D0026DBE3 /* tessdata */ = {isa = PBXFileReference; lastKnownFileType = folder; name = tessdata; path = "CC Scanner/tessdata"; sourceTree = "<group>"; };
 		33A7AE8522B18DE80048D7ED /* CC Scanner-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CC Scanner-Bridging-Header.h"; sourceTree = "<group>"; };
 		33A7AE8622B18DE80048D7ED /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 		33A7AE8822B18E430048D7ED /* Storyboarded.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Storyboarded.swift; sourceTree = "<group>"; };
@@ -62,6 +61,7 @@
 		33A7AE8C22B18FFC0048D7ED /* MainCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCoordinator.swift; sourceTree = "<group>"; };
 		33A7AE8E22B190120048D7ED /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		33A7AE9222B190810048D7ED /* CameraViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraViewController.swift; sourceTree = "<group>"; };
+		33EFD7D522B96F62001D3933 /* tessdata */ = {isa = PBXFileReference; lastKnownFileType = folder; path = tessdata; sourceTree = "<group>"; };
 		D8EEA5CE4DA0C72D4AEBFFC6 /* Pods-CC Scanner.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CC Scanner.debug.xcconfig"; path = "Target Support Files/Pods-CC Scanner/Pods-CC Scanner.debug.xcconfig"; sourceTree = "<group>"; };
 		DD6DCC28F27DF055A73ABEDB /* Pods_CC_Scanner.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CC_Scanner.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -95,7 +95,7 @@
 		3367F84622B13FD60078312E = {
 			isa = PBXGroup;
 			children = (
-				338F01DE22B8237D0026DBE3 /* tessdata */,
+				33EFD7D522B96F62001D3933 /* tessdata */,
 				3367F85122B13FD60078312E /* CC Scanner */,
 				3367F86622B13FDC0078312E /* CC ScannerTests */,
 				3367F87122B13FDC0078312E /* CC ScannerUITests */,
@@ -158,7 +158,6 @@
 				D8EEA5CE4DA0C72D4AEBFFC6 /* Pods-CC Scanner.debug.xcconfig */,
 				01BD903D78BAFF300A890DCD /* Pods-CC Scanner.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -278,7 +277,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3367F85D22B13FDC0078312E /* LaunchScreen.storyboard in Resources */,
-				338F01DF22B823870026DBE3 /* tessdata in Resources */,
+				33EFD7D622B96F62001D3933 /* tessdata in Resources */,
 				3367F85A22B13FDC0078312E /* Assets.xcassets in Resources */,
 				3367F85822B13FD60078312E /* Main.storyboard in Resources */,
 			);
