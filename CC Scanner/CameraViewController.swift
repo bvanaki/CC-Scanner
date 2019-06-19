@@ -5,8 +5,8 @@
 //  Created by Barbara Vanaki on 6/12/19.
 //  Copyright © 2019 Barbara Vanaki. All rights reserved.
 // Tutorials Used
-//https://www.appcoda.com/vision-framework-introduction/
-//https://medium.com/@khurram.pak522/scene-text-recognition-in-ios-11-2d0df8412151
+//https://www.appcoda.com/vision-framework-introduction/ To make vision boxes
+//https://medium.com/@khurram.pak522/scene-text-recognition-in-ios-11-2d0df8412151 To identify words with tesseract
 
 
 import UIKit
@@ -29,7 +29,7 @@ class CameraViewController: UIViewController, Storyboarded {
         super.viewDidLoad()
         
     
-        
+        //REMEMBER TO ASK FOR PERMISSION. I'M PRETTY SURE YOU NEED A POPUP
         startLiveVideo()
         startTextDetection()
     }
