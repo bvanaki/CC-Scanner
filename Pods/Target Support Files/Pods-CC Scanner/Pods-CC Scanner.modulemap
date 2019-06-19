@@ -1,0 +1,6 @@
+framework module Pods_CC_Scanner {
+  umbrella header "Pods-CC Scanner-umbrella.h"
+
+  export *
+  module * { export * }
+}
