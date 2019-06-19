@@ -5,7 +5,9 @@
 //  Created by Barbara Vanaki on 6/12/19.
 //  Copyright © 2019 Barbara Vanaki. All rights reserved.
 // Tutorials Used
+//https://www.appcoda.com/vision-framework-introduction/
 //https://medium.com/@khurram.pak522/scene-text-recognition-in-ios-11-2d0df8412151
+
 
 import UIKit
 import Vision

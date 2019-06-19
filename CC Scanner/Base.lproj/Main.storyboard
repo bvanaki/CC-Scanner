@@ -43,12 +43,17 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Wl6-fW-a0t">
-                                <rect key="frame" x="0.0" y="146" width="414" height="614"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Wl6-fW-a0t">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="oE4-TP-muz" firstAttribute="trailing" secondItem="Wl6-fW-a0t" secondAttribute="trailing" id="1IT-DX-75K"/>
+                            <constraint firstItem="Wl6-fW-a0t" firstAttribute="top" secondItem="oE4-TP-muz" secondAttribute="top" id="vhP-QF-VDi"/>
+                            <constraint firstItem="Wl6-fW-a0t" firstAttribute="leading" secondItem="oE4-TP-muz" secondAttribute="leading" id="xC7-Nc-tQU"/>
+                            <constraint firstItem="oE4-TP-muz" firstAttribute="bottom" secondItem="Wl6-fW-a0t" secondAttribute="bottom" id="yj9-Bw-OrM"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="oE4-TP-muz"/>
                     </view>
                     <connections>
