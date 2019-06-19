@@ -4,7 +4,8 @@
 //
 //  Created by Barbara Vanaki on 6/12/19.
 //  Copyright © 2019 Barbara Vanaki. All rights reserved.
-//
+// Tutorials Used
+//https://medium.com/@khurram.pak522/scene-text-recognition-in-ios-11-2d0df8412151
 
 import UIKit
 import Vision
@@ -15,110 +16,168 @@ import TesseractOCR
 
 
 class CameraViewController: UIViewController, Storyboarded {
-
+    weak var coordinator : MainCoordinator?
+    
+    
+    @IBOutlet weak var imageView: UIImageView!
+    var session = AVCaptureSession() //Yours is private, and everything breaks if you make it public
+    var requests = [VNRequest]()
+    
     override func viewDidLoad() {
-        //If the person lets you use the camera, then get it ready
-        if isAuthorized(){
-            configureCamera()
-        }
-        
-        
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        
+    
+        
+        startLiveVideo()
+        startTextDetection()
     }
     
-    
-    weak var coordinator: MainCoordinator?
-    
-    
-    
-    
-    //Get your camera ready
-    private var cameraView: CameraView {
-        return view as! CameraView
+    override func viewWillAppear(_ animated: Bool) {
+        
     }
     
     
     
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+        // Dispose of any resources that can be recreated.
+    }
     
-    
-    
-    private func configureCamera() {
-        cameraView.session = session
+    func startLiveVideo() {
+        //1
+        session.sessionPreset = AVCaptureSession.Preset.photo
+        let captureDevice = AVCaptureDevice.default(for: AVMediaType.video)
         
+        //2
+        let deviceInput = try! AVCaptureDeviceInput(device: captureDevice!)
+        let deviceOutput = AVCaptureVideoDataOutput()
+        deviceOutput.videoSettings = [kCVPixelBufferPixelFormatTypeKey as String: Int(kCVPixelFormatType_32BGRA)]
+        deviceOutput.setSampleBufferDelegate(self, queue: DispatchQueue.global(qos: DispatchQoS.QoSClass.default))
+        session.addInput(deviceInput)
+        session.addOutput(deviceOutput)
         
-        let cameraDevices = AVCaptureDevice.DiscoverySession(deviceTypes:
-        //You only want to use the BACK of the camera. Don't scare people by defaulting to the front. That's a terrible UX.
-            [.builtInWideAngleCamera], mediaType: AVMediaType.video, position: .back)
-        var cameraDevice: AVCaptureDevice?
-        for device in cameraDevices.devices {
-            if device.position == .back {
-                cameraDevice = device
-                break
-            }
-        }
-        do {
-            let captureDeviceInput = try AVCaptureDeviceInput(device: cameraDevice!)
-            //if you were able to get a device, then hook it up
-            if session.canAddInput(captureDeviceInput) {
-                session.addInput(captureDeviceInput)
-            }
-        }
-        catch {
-            print("Error occured configuring the camera \(error)")
-            return
-        }
-        session.sessionPreset = .high
-        let videoDataOutput = AVCaptureVideoDataOutput()
-        videoDataOutput.setSampleBufferDelegate(self as? AVCaptureVideoDataOutputSampleBufferDelegate, queue: DispatchQueue(label: "Buffer Queue", qos: .userInteractive, attributes: .concurrent, autoreleaseFrequency: .inherit, target: nil))
-        if session.canAddOutput(videoDataOutput) {
-            session.addOutput(videoDataOutput)
-        }
-        cameraView.videoPreviewLayer.videoGravity = .resize
+        //3
+        let imageLayer = AVCaptureVideoPreviewLayer(session: session)
+        imageLayer.frame = imageView.bounds
+        imageView.layer.addSublayer(imageLayer)
+        
         session.startRunning()
     }
     
+    override func viewDidLayoutSubviews() {
+        imageView.layer.sublayers?[0].frame = imageView.bounds
+    }
     
+    func startTextDetection() {
+        let textRequest = VNDetectTextRectanglesRequest(completionHandler: self.detectTextHandler)
+        textRequest.reportCharacterBoxes = true
+        self.requests = [textRequest]
+    }
     
-    private let session = AVCaptureSession()
-    
-
-    //Ask for permission
-    private func isAuthorized() -> Bool {
-        let authorizationStatus = AVCaptureDevice.authorizationStatus(for: AVMediaType.video)
-        switch authorizationStatus {
-        case .notDetermined:
-            AVCaptureDevice.requestAccess(for: AVMediaType.video,
-                                          completionHandler: { (granted:Bool) -> Void in
-                                            if granted {
-                                                DispatchQueue.main.async {
-                                                    print("granted")
-                                                    self.configureCamera()
-                                                }
-                                            }
-            })
-            return true
-        case .authorized:
-            return true
-        case .denied, .restricted: return false
+    func detectTextHandler(request: VNRequest, error: Error?) {
+        guard let observations = request.results else {
+            print("no result")
+            return
+        }
+        
+        let result = observations.map({$0 as? VNTextObservation})
+        
+        DispatchQueue.main.async() {
+            self.imageView.layer.sublayers?.removeSubrange(1...)
+            for region in result {
+                guard let rg = region else {
+                    continue
+                }
+                
+                self.highlightWord(box: rg)
+                
+                if let boxes = region?.characterBoxes {
+                    for characterBox in boxes {
+                        self.highlightLetters(box: characterBox)
+                    }
+                }
+            }
         }
     }
     
-    
-    
-    
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    func highlightWord(box: VNTextObservation) {
+        guard let boxes = box.characterBoxes else {
+            return
+        }
+        
+        var maxX: CGFloat = 9999.0
+        var minX: CGFloat = 0.0
+        var maxY: CGFloat = 9999.0
+        var minY: CGFloat = 0.0
+        
+        for char in boxes {
+            if char.bottomLeft.x < maxX {
+                maxX = char.bottomLeft.x
+            }
+            if char.bottomRight.x > minX {
+                minX = char.bottomRight.x
+            }
+            if char.bottomRight.y < maxY {
+                maxY = char.bottomRight.y
+            }
+            if char.topRight.y > minY {
+                minY = char.topRight.y
+            }
+        }
+        
+        let xCord = maxX * imageView.frame.size.width
+        let yCord = (1 - minY) * imageView.frame.size.height
+        let width = (minX - maxX) * imageView.frame.size.width
+        let height = (minY - maxY) * imageView.frame.size.height
+        
+        let outline = CALayer()
+        outline.frame = CGRect(x: xCord, y: yCord, width: width, height: height)
+        outline.borderWidth = 2.0
+        outline.borderColor = UIColor.red.cgColor
+        
+        imageView.layer.addSublayer(outline)
     }
-    */
-
+    
+    func highlightLetters(box: VNRectangleObservation) {
+        let xCord = box.topLeft.x * imageView.frame.size.width
+        let yCord = (1 - box.topLeft.y) * imageView.frame.size.height
+        let width = (box.topRight.x - box.bottomLeft.x) * imageView.frame.size.width
+        let height = (box.topLeft.y - box.bottomLeft.y) * imageView.frame.size.height
+        
+        let outline = CALayer()
+        outline.frame = CGRect(x: xCord, y: yCord, width: width, height: height)
+        outline.borderWidth = 1.0
+        outline.borderColor = UIColor.blue.cgColor
+        
+        imageView.layer.addSublayer(outline)
+    }
+    ////////////////////////////////////////////////////////////////////////////////////////////////
+    //now how do I pass those identified words and characters into this function.....?
+    
+    
+    
+    
+    
 }
 
-//remember that stuff in the extension isn't tested by unit tests, so try not to put too many important bits in here
-
+extension CameraViewController: AVCaptureVideoDataOutputSampleBufferDelegate {
+    func captureOutput(_ output: AVCaptureOutput, didOutput sampleBuffer: CMSampleBuffer, from connection: AVCaptureConnection) {
+        guard let pixelBuffer = CMSampleBufferGetImageBuffer(sampleBuffer) else {
+            return
+        }
+        
+        var requestOptions:[VNImageOption : Any] = [:]
+        
+        if let camData = CMGetAttachment(sampleBuffer, key: kCMSampleBufferAttachmentKey_CameraIntrinsicMatrix, attachmentModeOut: nil) {
+            requestOptions = [.cameraIntrinsics:camData]
+        }
+        
+        let imageRequestHandler = VNImageRequestHandler(cvPixelBuffer: pixelBuffer, orientation: CGImagePropertyOrientation(rawValue: 6)!, options: requestOptions)
+        
+        do {
+            try imageRequestHandler.perform(self.requests)
+        } catch {
+            print(error)
+        }
+    }
+}

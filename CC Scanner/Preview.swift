@@ -5,6 +5,7 @@
 //  Created by Khurram Shehzad on 09/08/2017.
 //  Copyright © 2017 devcrew. All rights reserved.
 //
+// Taken from this tutorial https://medium.com/@khurram.pak522/scene-text-recognition-in-ios-11-2d0df8412151
 
 import UIKit
 import AVFoundation
