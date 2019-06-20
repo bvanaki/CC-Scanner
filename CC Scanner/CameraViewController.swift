@@ -36,6 +36,7 @@ class CameraViewController: UIViewController, Storyboarded {
         //REMEMBER TO ASK FOR PERMISSION. I'M PRETTY SURE YOU NEED A POPUP
         startLiveVideo()
         startTextDetection()
+        
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -67,7 +68,14 @@ class CameraViewController: UIViewController, Storyboarded {
         imageLayer.frame = imageView.bounds
         imageView.layer.addSublayer(imageLayer)
         
+        //ADD TEXT DETECTION HERE INSTEAD TO PREVENT IT FROM GOING NIL!?
+        textDetectionRequest = VNDetectTextRectanglesRequest(completionHandler: detectTextHandler)
+        
         session.startRunning()
+        
+        if (textDetectionRequest == nil) {
+            print("ITS NIL HERE")
+        }
     }
  
     
@@ -92,9 +100,11 @@ class CameraViewController: UIViewController, Storyboarded {
         //textRequest.reportCharacterBoxes = true
         //self.requests = [textRequest]
         
-        textDetectionRequest = VNDetectTextRectanglesRequest(completionHandler: detectTextHandler)
+        //textDetectionRequest = VNDetectTextRectanglesRequest(completionHandler: detectTextHandler)
         textDetectionRequest?.reportCharacterBoxes = true
         self.requests = [textDetectionRequest] as! [VNRequest]
+        
+
     }
     
     
