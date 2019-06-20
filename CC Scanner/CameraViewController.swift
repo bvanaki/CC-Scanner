@@ -32,10 +32,13 @@ class CameraViewController: UIViewController, Storyboarded {
         // Recognize only these characters
         tesseract?.charWhitelist = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz1234567890-/."
         
-    
         //REMEMBER TO ASK FOR PERMISSION. I'M PRETTY SURE YOU NEED A POPUP
-        startLiveVideo()
-        startTextDetection()
+        if isAuthorized() {
+            startLiveVideo()
+            startTextDetection()
+        }
+    
+    
         
     }
     
@@ -44,6 +47,29 @@ class CameraViewController: UIViewController, Storyboarded {
     }
     
     
+    
+    
+    //Out of the box permissions request
+    //https://developer.apple.com/documentation/avfoundation/cameras_and_media_capture/requesting_authorization_for_media_capture_on_ios
+    private func isAuthorized() -> Bool {
+        let authorizationStatus = AVCaptureDevice.authorizationStatus(for: AVMediaType.video)
+        switch authorizationStatus {
+        case .notDetermined:
+            AVCaptureDevice.requestAccess(for: AVMediaType.video,
+                                          completionHandler: { (granted:Bool) -> Void in
+                                            if granted {
+                                                DispatchQueue.main.async {
+                                                    self.startLiveVideo()
+                                                    self.startTextDetection()
+                                                }
+                                            }
+            })
+            return true
+        case .authorized:
+            return true
+        case .denied, .restricted: return false
+        }
+    }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -79,7 +105,7 @@ class CameraViewController: UIViewController, Storyboarded {
     }
  
     
-    ////////////////////////////////////////
+
     private var cameraView: CameraView {
         return view as! CameraView
     }
@@ -96,11 +122,6 @@ class CameraViewController: UIViewController, Storyboarded {
     }
     
     func startTextDetection() {
-        //let textRequest = VNDetectTextRectanglesRequest(completionHandler: self.detectTextHandler)
-        //textRequest.reportCharacterBoxes = true
-        //self.requests = [textRequest]
-        
-        //textDetectionRequest = VNDetectTextRectanglesRequest(completionHandler: detectTextHandler)
         textDetectionRequest?.reportCharacterBoxes = true
         self.requests = [textDetectionRequest] as! [VNRequest]
         
@@ -203,8 +224,7 @@ class CameraViewController: UIViewController, Storyboarded {
     ////////////////////////////////////////////////////////////////////////////////////////////////
     //now how do I pass those identified words and characters into this function.....?
     
-    
-    
+
     private var textDetectionRequest: VNDetectTextRectanglesRequest?
     private var textObservations = [VNTextObservation]()
     private var tesseract = G8Tesseract(language: "eng", engineMode: .tesseractOnly)
@@ -274,7 +294,7 @@ extension CameraViewController: AVCaptureVideoDataOutputSampleBufferDelegate {
                 let height = yMax - yMin
                 recognizedTextPositionTuples.append((rect: CGRect(x: x, y: y, width: width, height: height), text: text))
             }
-            print(text) //THIS PRINTS THE TEXT
+           // print(text) //THIS PRINTS THE TEXT
         }
         textObservations.removeAll()
         DispatchQueue.main.async {

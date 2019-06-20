@@ -14,6 +14,7 @@ class MainCoordinator: Coordinator  {
     
     init(navigationController: UINavigationController) {
         self.navigationController = navigationController
+        navigationController.navigationBar.barTintColor = UIColor(red:0.07, green:0.55, blue:0.93, alpha:1.0)
     }
     
     func start() {
