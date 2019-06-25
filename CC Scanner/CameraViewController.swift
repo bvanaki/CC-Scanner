@@ -193,6 +193,8 @@ class CameraViewController: UIViewController, Storyboarded {
             if char.topRight.y > minY {
                 minY = char.topRight.y
             }
+            
+         
         }
         
         let xCord = maxX * imageView.frame.size.width
@@ -260,7 +262,15 @@ extension CameraViewController: AVCaptureVideoDataOutputSampleBufferDelegate {
         ciImage = ciImage.transformed(by: transform)
         let size = ciImage.extent.size
         var recognizedTextPositionTuples = [(rect: CGRect, text: String)]()
+        
+      //  var count = 0
         for textObservation in textObservations {
+            
+            if textObservation.characterBoxes!.count > 11 { //I know this is hardcoded right now. I figure its just long enough to filter out phone numbers while still leaving the account number
+            
+           // count = count + 1
+            //print (count)
+            
             guard let rects = textObservation.characterBoxes else {
                 continue
             }
@@ -288,14 +298,39 @@ extension CameraViewController: AVCaptureVideoDataOutputSampleBufferDelegate {
             }
             text = text.trimmingCharacters(in: CharacterSet.newlines)
             if !text.isEmpty {
-                let x = xMin
-                let y = 1 - yMax
-                let width = xMax - xMin
-                let height = yMax - yMin
-                recognizedTextPositionTuples.append((rect: CGRect(x: x, y: y, width: width, height: height), text: text))
-            }
-            print(text) //THIS PRINTS THE TEXT TO CONSOLE
-        }
+                
+                    /*Sometimes Tess thinks numbers are letters or vice versa, so this is a
+                     super round about way to guess if the 11-char string we found is more likely to be a card number or a name.
+                    You can do this to figure out if its a name as well, but that'd be harder since names are less consistent*/
+ 
+                var numbersInString = text.Numbers.count
+                var lettersInString = (text.count - numbersInString)
+                
+                if (numbersInString > lettersInString){
+                    print("Card Number \(text)")
+                }
+                   
+                }
+                
+                    
+                        
+               }
+                    
+                    
+                }
+            
+                
+        
+        
+               // let x = xMin
+                //let y = 1 - yMax
+                //let width = xMax - xMin
+               // let height = yMax - yMin
+               // recognizedTextPositionTuples.append((rect: CGRect(x: x, y: y, width: width, height: height), text: text))
+            
+           
+            //print(text) //THIS PRINTS THE TEXT TO CONSOLE
+     
         textObservations.removeAll()
         DispatchQueue.main.async {
             let viewWidth = self.view.frame.size.width
@@ -330,5 +365,18 @@ extension CameraViewController: AVCaptureVideoDataOutputSampleBufferDelegate {
                 self.view.layer.addSublayer(textLayer)
             }
         }
+    }
+}
+
+
+
+
+
+
+extension String {
+    var Numbers: String {
+        let pattern = UnicodeScalar("0")..."9"
+        return String(unicodeScalars
+            .compactMap { pattern ~= $0 ? Character($0) : nil })
     }
 }
