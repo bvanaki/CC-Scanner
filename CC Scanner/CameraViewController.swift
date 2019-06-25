@@ -294,7 +294,7 @@ extension CameraViewController: AVCaptureVideoDataOutputSampleBufferDelegate {
                 let height = yMax - yMin
                 recognizedTextPositionTuples.append((rect: CGRect(x: x, y: y, width: width, height: height), text: text))
             }
-           // print(text) //THIS PRINTS THE TEXT
+            print(text) //THIS PRINTS THE TEXT TO CONSOLE
         }
         textObservations.removeAll()
         DispatchQueue.main.async {
