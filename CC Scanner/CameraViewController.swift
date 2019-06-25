@@ -209,7 +209,7 @@ class CameraViewController: UIViewController, Storyboarded {
         
         imageView.layer.addSublayer(outline)
     }
-    
+     
     func highlightLetters(box: VNRectangleObservation) {
         let xCord = box.topLeft.x * imageView.frame.size.width
         let yCord = (1 - box.topLeft.y) * imageView.frame.size.height
